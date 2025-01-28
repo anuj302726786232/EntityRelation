@@ -14,10 +14,12 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EntityContext>(options =>
 {
-    con.GetConnectionString()
+    // con.GetConnectionString()
     string connectionString = "Server=127.0.0.1;Database=entitydb;User=root;Password=root";
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
+
+builder.Services.AddRouting();
 
 var app = builder.Build();
 
