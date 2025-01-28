@@ -19,8 +19,6 @@ builder.Services.AddDbContext<EntityContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
-builder.Services.AddRouting();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
